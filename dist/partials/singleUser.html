@@ -1,0 +1,46 @@
+<header class="flexHeader">
+	<h1><small>user </small>{{user.name}} {{user.surname | uppercase}}</h1>
+</header>
+
+<div class="flexContainer">
+	<aside> <!-- left / image -->
+		<div class="box">
+			<div class="card">
+				<div class="front">
+					<img src="http://dummyimage.com/120x160/58319c/fff&text=img" alt="" class="userImg">
+				</div>
+				<div class="back">
+					{{user.name}} <br>
+					{{user.surname}} <br>
+					{{user.age}}
+				</div>
+			</div>
+		</div>
+	</aside>
+	<section>
+		<div ng-show="showDeleteAlert">
+			<div class="alert alert-success">
+			  <a class="close fade in" data-dismiss="alert" aria-label="close">&times;</a>
+			  <strong>Success!</strong> User <strong>{{aName + " " + aSurname}}</strong> was deleted!
+			</div>
+		</div>
+		<div ng-show="showErrorAlert">
+			<div class="alert alert-danger">
+			  <a class="close fade in" data-dismiss="alert" aria-label="close">&times;</a>
+			  <strong>Error!</strong> Sth was wrong!
+			</div>
+		</div>
+		<span class="violetColor">Age: </span>{{user.age}} <br>
+		<span class="violetColor">Sex: </span>{{user.sex}} <br>
+		<span class="violetColor">Eyes color: </span>{{user.eyes}} <br>
+		<span class="violetColor">Description: </span><br>
+		{{user.description}}
+		<div class="tiles">
+			<div class="tile" id="editU"><a ui-sref="editUser({ id: goTo})" class="editU"></a></div>
+			<div class="tile" id="deleteU"><a ng-click="delete( user.id )" class="deleteU"></a></div>
+		</div>
+	</section>
+</div>
+<footer>
+	<span class="violetColor">Created by:</span> Łukasz Mordasiewicz
+</footer>

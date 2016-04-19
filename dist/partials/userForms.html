@@ -1,0 +1,86 @@
+<div class="row">
+	<div class="col-sm-6">
+		<form name="addUserForm" ng-submit="properName(user.name) && !improperSings(user.name) && properSurname(user.surname) && !improperSings(user.surname) && addUserForm.$valid && submitForm(user.name, user.surname, user.age, user.sex, user.eyes, user.description)" novalidate>
+			<!-- username -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="username">Name:</label>
+				</div>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" id="username" name="username" placeholder="Username" ng-model="user.name" ng-class="{redInput: (addUserForm.username.$dirty || submitted) && (addUserForm.username.$error.required || !properName(user.name) || improperSings(user.name))}" required>
+					<span class="text-danger" ng-show="(addUserForm.username.$dirty || submitted) && addUserForm.username.$error.required">Write sth... </span>
+					<span class="text-danger" ng-show="addUserForm.username.$dirty && !properName(user.name)">Start name from big letter, next type small ;)</span>
+					<span class="text-danger" ng-show="addUserForm.username.$dirty && improperSings(user.name)">Improper sign(s)</span>
+				</div>
+			</div> <!-- /.row -->
+			<!-- surname -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="surname">Surname:</label>
+				</div>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" id="surname" name="surname" placeholder="Surname" ng-model="user.surname" ng-class="{redInput: (addUserForm.surname.$dirty || submitted) && (addUserForm.surname.$error.required || !properSurname(user.surname) || improperSings(user.surname))}" required>
+					<span class="text-danger" ng-show="(addUserForm.surname.$dirty || submitted) && addUserForm.surname.$error.required">Write sth... </span>
+					<span class="text-danger" ng-show="addUserForm.surname.$dirty && !properSurname(user.surname)">Start surname from big letter, next type small ;)</span>
+					<span class="text-danger" ng-show="addUserForm.surname.$dirty && improperSings(user.surname)">Improper sign(s)</span>
+				</div>
+			</div> <!-- /.row -->
+			<!-- age -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="age">Age:</label>
+				</div>
+				<div class="col-sm-9">
+					<input class="form-control" type="number" id="age" name="age" placeholder="Age" min="3" max="103" ng-model="user.age" ng-class="{redInput: (addUserForm.age.$dirty || submitted)&& addUserForm.age.$error.required}" required>
+					<span class="text-danger" ng-show="addUserForm.age.$error.min || addUserForm.age.$error.max">Age from 3 to 103</span>
+					<span class="text-danger" ng-show="addUserForm.age.$error.number">Age should be a number ;)</span>
+					<span class="text-danger" ng-show="(addUserForm.age.$dirty || submitted) && addUserForm.age.$error.required">Write sth...</span>
+				</div>
+			</div> <!-- /.row -->
+			<!-- sex -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="sex">Sex:</label>
+				</div>
+				<div class="col-sm-9">
+					<select id="sex" name="sex" class="form-control" ng-model="user.sex" ng-options="selectsex.value as selectsex.name for selectsex in sexOptions" ng-class="{redInput: submitted && addUserForm.sex.$error.required}" required> 
+					</select> 
+					<span class="text-danger" ng-show="submitted && addUserForm.sex.$error.required">Select sth...</span>
+				</div>
+			</div> <!-- /.row -->
+			<!-- eyes -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="eyes">Eyes:</label>
+				</div>
+				<div class="col-sm-9">
+					<select id="eyes" name="eyes" class="form-control" ng-model="user.eyes" ng-options="selectEyes.value as selectEyes.name for selectEyes in eyesOptions" ng-class="{redInput: submitted && addUserForm.eyes.$error.required}" required> 
+				  </select> 
+					<span class="text-danger" ng-show="submitted && addUserForm.eyes.$error.required">Select sth...</span>
+				</div>
+			</div> <!-- /.row -->
+			<!-- description -->
+			<div class="row newRow">
+				<div class="col-sm-3">
+					<label for="description">Description:</label>
+				</div>
+				<div class="col-sm-9">
+					<textarea name="description" id="description" class="form-control" ng-model="user.description"></textarea>
+				</div>
+			</div> <!-- /.row -->
+			<!-- submit -->
+			<div class="row newRow">
+				<div class="col-sm-offset-3 col-sm-9">
+					<input type="submit" ng-click="trysubmit()" class="btn btn-primary full" value="Save">
+				</div>
+			</div> <!-- /.row -->
+		</form>
+	</div> <!-- /. col-sm-6 formSide -->
+	<div class="col-sm-6">
+		<h2><span class="showUserData">{{user.name + " " + user.surname}}</span></h2>
+		<span ng-show="user.age" class="violetColor">Age:</span><span class="showUserData"> {{user.age}}</span> <br>
+		<span ng-show="user.sex" class="violetColor">Sex:</span><span class="showUserData"> {{user.sex}}</span> <br>
+		<span ng-show="user.eyes" class="violetColor">Eyes:</span><span class="showUserData"> {{user.eyes}}</span> <br>
+		<span ng-show="user.description" class="violetColor">Description:</span><span class="showUserData"></span> {{user.description}}
+	</div>
+</div>

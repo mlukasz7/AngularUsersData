@@ -1,0 +1,100 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "4ced65e721620e2b3e77b02d54af4100",
+      "css": "venus-mars",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "11d74f891bce30f1bdf73d3259d59ed5",
+      "css": "user",
+      "code": 59393,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "05ef9b5e8742971aa85b23cfcbe71594",
+      "css": "users",
+      "code": 59394,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "c5fd349cbd3d23e4ade333789c29c729",
+      "css": "eye",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5e5a88921aa39b292bdd56c3b9c923d3",
+      "css": "gift",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "3e674995cacc2b09692c096ea7eb6165",
+      "css": "megaphone",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "076f940ac56adee91dd43d6fd77dd0cf",
+      "css": "user-add",
+      "code": 59398,
+      "src": "typicons"
+    },
+    {
+      "uid": "a6267a0b7262e1deffcc83076bc0e197",
+      "css": "trash",
+      "code": 59399,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "242giivkgr3e6le7b2xqi2pkdruf85mu",
+      "css": "edit",
+      "code": 59400,
+      "src": "modernpics"
+    },
+    {
+      "uid": "9396b2d8849e0213a0f11c5fd7fcc522",
+      "css": "tasks",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "w3nzesrlbezu6f30q7ytyq919p6gdlb6",
+      "css": "home",
+      "code": 59402,
+      "src": "typicons"
+    },
+    {
+      "uid": "a42f298da5c64e646a5d532724cd6e15",
+      "css": "home-outline",
+      "code": 59403,
+      "src": "typicons"
+    },
+    {
+      "uid": "95376bf082bfec6ce06ea1cda7bd7ead",
+      "css": "up-big",
+      "code": 59404,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ec21fe3492bb04d9e29103c319556ed8",
+      "css": "search",
+      "code": 59405,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "347c38a8b96a509270fdcabc951e7571",
+      "css": "database",
+      "code": 59406,
+      "src": "fontawesome"
+    }
+  ]
+}

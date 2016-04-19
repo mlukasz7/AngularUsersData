@@ -1,0 +1,26 @@
+<header class="container">
+	<div class="row"></div>
+		<div class="col-sm-12">
+			<h1>Edit <small>user</small></h1>
+			<hr>
+		</div>
+	</div> <!-- /.row -->
+</header>
+<section class="container">
+	<div class="row" ng-show="showOkAlert">
+		<div class="alert alert-success">
+		  <a class="close fade in" data-dismiss="alert" aria-label="close">&times;</a>
+		  <strong>Success!</strong> Changes was safe :)
+		</div>
+	</div>
+	<div class="row" ng-show="showErrorAlert">
+		<div class="alert alert-danger">
+		  <a class="close fade in" data-dismiss="alert" aria-label="close">&times;</a>
+		  <strong>Error!</strong> Sth was wrong
+		</div>
+	</div>
+	<user-form></user-form>
+</section>
+<footer>
+	<span class="violetColor">Created by:</span> Łukasz Mordasiewicz
+</footer>
