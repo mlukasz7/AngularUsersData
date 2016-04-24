@@ -1,5 +1,5 @@
 ## AngularUsersData
-Applications for management users data
+Application for management users data.
 
 ![alt tag](https://raw.githubusercontent.com/mlukasz7/AngularUsersData/master/UsersData.gif)
 
